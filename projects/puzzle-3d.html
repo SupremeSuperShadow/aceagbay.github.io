@@ -7,49 +7,62 @@
 </head>
 <body>
 
-<a href="../index.html">← Back to Projects</a>
+<main>
 
-<h1>Power Puzzle</h1>
-<p>A short first-person 3D puzzle game focused on spatial reasoning.</p>
+  <!-- Back Button -->
+  <a href="../index.html" class="btn">← Back to Projects</a>
 
-<!-- EMBEDDED GAME -->
-<iframe
-  src="../games/puzzle-3d-game/index.html"
-  width="960"
-  height="540"
-  loading="lazy">
-</iframe>
+  <!-- Title and description -->
+  <h1 class="centered">Power Puzzle</h1>
+  <p class="centered">A short first-person 3D puzzle game focused on spatial reasoning.</p>
 
-<h2>Controls</h2>
-<ul>
-  <li>WASD — Movement</li>
-  <li>Space — Jump</li>
-  <li>Mouse — Look</li>
-  <li>Left Click — Interact</li>
-</ul>
+  <!-- Content Wrapper -->
+  <div class="content">
 
-<h2>Tools</h2>
-<ul>
-  <li>Godot v4.5.1</li>
-  <li>Sketchpad</li>
-  <li>Audacity</li>
-  <li>BeepBox</li>
-</ul>
+    <!-- Embedded Game -->
+    <iframe
+      src="../games/puzzle-3d-game/index.html"
+      width="960"
+      height="540"
+      loading="lazy">
+    </iframe>
 
-<h2>Contribution</h2>
-<ul>
-  <li>Sole developer</li>
-</ul>
+    <!-- Controls -->
+    <h2>Controls</h2>
+    <ul>
+      <li>WASD — Movement</li>
+      <li>Space — Jump</li>
+      <li>Mouse — Look</li>
+      <li>Left Click — Interact</li>
+    </ul>
 
-<h2>Highlights</h2>
-<ul>
-  <li>Custom outline shader for highlighting interactable objects</li>
-  <li>Raycast-based interaction system driving visual feedback</li>
-  <li>Spatial puzzle design with power transfer and platform sequencing</li>
-  <li>Soft-lock prevention and automatic level recovery</li>
-</ul>
+    <!-- Tools -->
+    <h2>Tools</h2>
+    <ul>
+      <li>Godot v4.5.1</li>
+      <li>Sketchpad</li>
+      <li>Audacity</li>
+      <li>BeepBox</li>
+    </ul>
 
-</body>
+    <!-- Contribution -->
+    <h2>Contribution</h2>
+    <ul>
+      <li>Sole developer</li>
+    </ul>
+
+    <!-- Highlights -->
+    <h2>Highlights</h2>
+    <ul>
+      <li>Custom outline shader for highlighting interactable objects</li>
+      <li>Raycast-based interaction system driving visual feedback</li>
+      <li>Puzzle requires interaction with previous elements</li>
+      <li>Soft-lock prevention</li>
+    </ul>
+
+  </div>
+
+</main>
 
 <footer>
   <p>
@@ -57,4 +70,6 @@
     <a href="https://github.com/SupremeSuperShadow/aceagbay.github.io">GitHub Repository</a>
   </p>
 </footer>
+
+</body>
 </html>
