@@ -134,6 +134,11 @@ img {
   section {
     padding-top: 6rem; /* taller nav on mobile */
   }
+
+  article::before {
+    height: 6rem;
+    margin-top: -6rem;
+  }
 }
 
 /* Center headings and main text */
@@ -290,4 +295,13 @@ footer a:hover {
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
+}
+
+/* Sticky nav offset for articles (anchors) */
+article::before {
+  content: "";
+  display: block;
+  height: 5rem; /* nav height */
+  margin-top: -5rem; /* negative to offset scroll */
+  visibility: hidden;
 }
