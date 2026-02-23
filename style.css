@@ -123,7 +123,8 @@ article::before {
 .content iframe {
   display: block;
   margin: 1.5rem auto 2rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 960px;  /* original size */
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
