@@ -13,6 +13,11 @@ body {
   background-color: #fafafa;
 }
 
+/* Sticky nav offset for scrolling to anchors */
+html {
+  scroll-padding-top: 4rem; /* matches #main-nav padding + buffer */
+}
+
 /* ===== Layout ===== */
 main {
   max-width: 900px;
@@ -121,6 +126,10 @@ img {
   main {
     padding: 1rem;
   }
+
+  html {
+    scroll-padding-top: 6rem; /* taller nav on mobile */
+  }
 }
 
 /* Center headings and main text */
@@ -221,8 +230,6 @@ img {
 
 section {
   margin-bottom: 5rem;
-  /* Offset all sections by the height of the sticky nav */
-  scroll-margin-top: 70px;
 }
 
 .btn {
