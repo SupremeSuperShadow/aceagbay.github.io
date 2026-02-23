@@ -129,3 +129,43 @@ img {
   margin-right: auto;
   max-width: 600px; /* optional: limits line length */
 }
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto; /* center images inside project articles */
+  border-radius: 6px;
+}
+
+.project {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd; /* subtle separation */
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.project a:hover {
+  background-color: #004a99;
+}
+
+.project p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project h2 {
+  margin-bottom: 0.5rem;
+}
