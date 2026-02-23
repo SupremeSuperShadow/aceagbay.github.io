@@ -13,9 +13,9 @@ body {
   background-color: #fafafa;
 }
 
-/* Sticky nav offset for scrolling to anchors */
+/* ===== Sticky nav offset for anchor scrolling ===== */
 html {
-  scroll-padding-top: 4rem; /* matches #main-nav padding + buffer */
+  scroll-padding-top: 6rem; /* nav height + buffer for desktop */
 }
 
 /* ===== Layout ===== */
@@ -40,26 +40,17 @@ h1, h2, h3 {
   margin-top: 2.5rem;
 }
 
-h1 {
-  font-size: 2rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
 
-h2 {
-  font-size: 1.4rem;
-}
-
-p {
-  margin: 0.75rem 0 1.25rem;
-}
+p { margin: 0.75rem 0 1.25rem; }
 
 ul {
   margin: 0.75rem 0 1.5rem;
   padding-left: 1.25rem;
 }
 
-li {
-  margin-bottom: 0.4rem;
-}
+li { margin-bottom: 0.4rem; }
 
 /* ===== Links ===== */
 a {
@@ -67,140 +58,16 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Projects ===== */
-#projects {
-  background: #fff;
-  padding: 3rem 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.project {
-  margin-bottom: 4rem;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem 0;
-}
-
-/* ===== Embedded Games ===== */
-iframe {
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid #ddd;
-  margin: 1.5rem 0 2rem;
-}
+a:hover { text-decoration: underline; }
 
 /* ===== Navigation ===== */
-a[href*="index.html"] {
-  display: inline-block;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-/* ===== Images & GIFs ===== */
-img {
-  border-radius: 4px;
-}
-
-/* ===== Mobile Tweaks ===== */
-@media (max-width: 600px) {
-  #main-nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .project img, .project iframe {
-    width: 100%;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  html {
-    scroll-padding-top: 6rem; /* taller nav on mobile */
-  }
-
-  section {
-    padding-top: 6rem; /* taller nav on mobile */
-  }
-
-  article::before {
-    height: 7rem;      /* taller nav + extra buffer on mobile */
-    margin-top: -7rem;
-  }
-}
-
-/* Center headings and main text */
-#bio, #projects {
-  text-align: center;
-}
-
-.bio-img {
-  max-width: 180px;
-  border-radius: 50%;
-  margin-top: 1rem;
-}
-
-#bio p, .project p {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px; /* optional: limits line length */
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1rem auto; /* center images inside project articles */
-  border-radius: 6px;
-}
-
-.project {
-  margin-bottom: 4rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ddd; /* subtle separation */
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.45rem 1rem;
-  background-color: #0066cc;
-  color: white;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.project a:hover {
-  background-color: #004a99;
-}
-
-.project p {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project h2 {
-  margin-bottom: 0.5rem;
-}
-
-.project:hover {
-  transform: translateY(-3px);
-  transition: transform 0.3s ease;
+#main-nav {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 #main-nav ul {
@@ -214,35 +81,106 @@ img {
   font-weight: 500;
 }
 
-#main-nav a:hover {
-  text-decoration: underline;
-}
+#main-nav a:hover { text-decoration: underline; }
 
-#main-nav {
-  position: sticky;
-  top: 0;
-  background-color: #ffffff; /* fully opaque */
-  z-index: 999; /* ensures nav stays on top of content */
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.project img, .project iframe {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.project img:hover {
-  transform: scale(1.02);
-}
-
-section {
+/* ===== Projects / Sections ===== */
+section, article {
   position: relative;
-  padding-top: 5rem; /* approximate nav height */
   margin-bottom: 5rem;
 }
 
+/* Add uniform anchor offset for all sections/articles */
+section::before,
+article::before {
+  content: "";
+  display: block;
+  height: 6rem;       /* nav height + buffer */
+  margin-top: -6rem;  /* negative of above */
+  visibility: hidden;
+}
+
+/* ===== Projects ===== */
+#projects {
+  background: #fff;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.project {
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.project img,
+.project iframe {
+  max-width: 800px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.project img:hover { transform: scale(1.02); }
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.project a:hover { background-color: #004a99; }
+
+.project p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project h2 { margin-bottom: 0.5rem; }
+
+.project:hover {
+  transform: translateY(-3px);
+  transition: transform 0.3s ease;
+}
+
+/* ===== Bio / Centered Content ===== */
+#bio, #projects {
+  text-align: center;
+}
+
+.bio-img {
+  max-width: 180px;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+#bio p { max-width: 600px; margin: 0 auto; }
+
+/* ===== Sub-page content wrapper ===== */
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.centered { text-align: center; }
+
+.content iframe {
+  display: block;
+  margin: 1.5rem auto 2rem;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -254,10 +192,9 @@ section {
   margin-top: 0.5rem;
 }
 
-.btn:hover {
-  background-color: #2563eb;
-}
+.btn:hover { background-color: #2563eb; }
 
+/* ===== Footer ===== */
 footer {
   margin-top: 4rem;
   padding: 1.5rem 1rem;
@@ -271,37 +208,17 @@ footer a {
   color: #3b82f6;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
+footer a:hover { text-decoration: underline; }
 
-/* ===== Sub-page Content Wrapper ===== */
-.content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left; /* bullets aligned properly */
-}
+/* ===== Mobile Tweaks ===== */
+@media (max-width: 600px) {
+  #main-nav ul { flex-direction: column; gap: 0.75rem; }
 
-/* Center headings and description */
-.centered {
-  text-align: center;
-}
+  .project img, .project iframe { width: 100%; }
 
-/* Ensure iframe is nicely centered */
-.content iframe {
-  display: block;
-  margin: 1.5rem auto 2rem;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
+  main { padding: 1rem; }
 
-/* Sticky nav offset for articles (anchors) */
-article::before {
-  content: "";
-  display: block;
-  height: 6rem;       /* nav height + extra buffer */
-  margin-top: -6rem;  /* negative of above */
-  visibility: hidden;
+  html { scroll-padding-top: 7rem; } /* taller nav + buffer on mobile */
+  section::before,
+  article::before { height: 7rem; margin-top: -7rem; }
 }
