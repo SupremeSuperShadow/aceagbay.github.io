@@ -234,3 +234,18 @@ footer a:hover { text-decoration: underline; }
   section::before,
   article::before { height: 7rem; margin-top: -7rem; }
 }
+
+.full-width {
+  width: 100%;           /* span full viewport */
+  display: flex;
+  justify-content: center; /* center iframe horizontally */
+  margin: 2rem 0;         /* vertical spacing */
+}
+
+.full-width iframe {
+  width: 960px;           /* original game width */
+  height: 540px;          /* original game height */
+  max-width: 100%;        /* scale down on small screens */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
