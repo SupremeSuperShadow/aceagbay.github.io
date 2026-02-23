@@ -131,9 +131,8 @@ img {
     scroll-padding-top: 6rem; /* taller nav on mobile */
   }
 
-  section::before {
-    height: 6rem; /* taller nav on mobile if wrapped */
-    margin-top: -6rem;
+  section {
+    padding-top: 6rem; /* taller nav on mobile */
   }
 }
 
@@ -234,16 +233,9 @@ img {
 }
 
 section {
+  position: relative;
+  padding-top: 5rem; /* approximate nav height */
   margin-bottom: 5rem;
-}
-
-/* Sticky nav offset for anchor links */
-section::before {
-  content: "";
-  display: block;
-  height: calc(1rem + 1rem + 16px); /* match nav height + extra buffer */
-  margin-top: -calc(1rem + 1rem + 16px); /* negative to avoid extra spacing */
-  visibility: hidden;
 }
 
 .btn {
