@@ -236,9 +236,10 @@ footer a:hover { text-decoration: underline; }
 }
 
 .full-width-iframe {
-  width: 100vw;               /* full viewport width */
-  max-width: 960px;           /* iframe's normal width */
-  margin: 2rem auto;          /* spacing and centered */
+  width: 100vw;        /* full viewport width */
+  max-width: 960px;    /* normal game width */
+  margin: 2rem auto;   /* spacing and center */
+  padding: 0;          /* remove padding from parent container */
   display: block;
   text-align: center;
 }
