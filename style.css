@@ -136,8 +136,8 @@ img {
   }
 
   article::before {
-    height: 6rem;
-    margin-top: -6rem;
+    height: 7rem;      /* taller nav + extra buffer on mobile */
+    margin-top: -7rem;
   }
 }
 
@@ -301,7 +301,7 @@ footer a:hover {
 article::before {
   content: "";
   display: block;
-  height: 5rem; /* nav height */
-  margin-top: -5rem; /* negative to offset scroll */
+  height: 6rem;       /* nav height + extra buffer */
+  margin-top: -6rem;  /* negative of above */
   visibility: hidden;
 }
