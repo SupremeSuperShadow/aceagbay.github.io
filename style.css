@@ -113,11 +113,19 @@ article::before {
   border-bottom: 1px solid #ddd;
 }
 
-.project img,
-.project iframe {
+.project img {
   max-width: 800px;
   display: block;
   margin: 1rem auto;
+  border-radius: 6px;
+}
+
+.content iframe {
+  display: block;
+  margin: 1.5rem auto 2rem;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #ddd;
   border-radius: 6px;
 }
 
