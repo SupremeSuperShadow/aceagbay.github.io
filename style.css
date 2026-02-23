@@ -180,10 +180,13 @@ article::before {
 
 .centered { text-align: center; }
 
+.project iframe,
 .content iframe {
   display: block;
   margin: 1.5rem auto 2rem;
-  max-width: 100%;
+  width: 100vw;         /* full viewport width */
+  max-width: 1152px;     /* original size */
+  height: auto;
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
