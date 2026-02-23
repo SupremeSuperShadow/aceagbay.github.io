@@ -235,17 +235,21 @@ footer a:hover { text-decoration: underline; }
   article::before { height: 7rem; margin-top: -7rem; }
 }
 
-.full-width {
-  width: 100%;           /* span full viewport */
-  display: flex;
-  justify-content: center; /* center iframe horizontally */
-  margin: 2rem 0;         /* vertical spacing */
+.full-width-iframe {
+  width: 100vw;               /* full viewport width */
+  max-width: 960px;           /* iframe's normal width */
+  margin: 2rem auto;          /* spacing and centered */
+  display: block;
+  text-align: center;
 }
 
-.full-width iframe {
-  width: 960px;           /* original game width */
-  height: 540px;          /* original game height */
-  max-width: 100%;        /* scale down on small screens */
+.full-width-iframe iframe {
+  width: 960px;
+  height: 540px;
+  max-width: 100%;            /* scale down on small screens */
+  aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
+  display: block;
+  margin: 0 auto;             /* center iframe inside wrapper */
 }
