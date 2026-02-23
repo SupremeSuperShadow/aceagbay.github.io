@@ -184,8 +184,8 @@ article::before {
 .content iframe {
   display: block;
   margin: 1.5rem auto 2rem;
-  width: 100vw;         /* full viewport width */
-  max-width: 1152px;     /* original size */
+  width: 100vw;
+  max-width: 960px;
   height: auto;
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
