@@ -124,7 +124,7 @@ article::before {
   display: block;
   margin: 1.5rem auto 2rem;
   width: 100%;
-  max-width: 960px;  /* original size */
+  max-width: 1152px;  /* original size */
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
