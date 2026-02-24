@@ -236,21 +236,20 @@ footer a:hover { text-decoration: underline; }
 }
 
 .full-width-iframe {
-  width: 100vw;        /* full viewport width */
-  max-width: 960px;    /* normal game width */
-  margin: 2rem auto;   /* spacing and center */
-  padding: 0;          /* remove padding from parent container */
-  display: block;
-  text-align: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
 }
 
 .full-width-iframe iframe {
   width: 960px;
-  height: 540px;
-  max-width: 100%;            /* scale down on small screens */
+  max-width: 100%;
   aspect-ratio: 16 / 9;
   border: 1px solid #ddd;
   border-radius: 6px;
-  display: block;
-  margin: 0 auto;             /* center iframe inside wrapper */
 }
