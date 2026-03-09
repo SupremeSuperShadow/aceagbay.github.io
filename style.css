@@ -233,6 +233,12 @@ footer a:hover { text-decoration: underline; }
   html { scroll-padding-top: 7rem; } /* taller nav + buffer on mobile */
   section::before,
   article::before { height: 7rem; margin-top: -7rem; }
+
+  .project-media {
+    width: 100%;
+    max-width: 960px;        /* or whatever your page content width is */
+    aspect-ratio: 16 / 9;    /* ensures correct proportions */
+  }
 }
 
 .full-width-iframe {
@@ -257,7 +263,8 @@ footer a:hover { text-decoration: underline; }
 /* Make wrapper relative for overlay positioning */
 .video-wrapper {
   position: relative;
-  display: inline-block;
+  display: inline-block;   /* shrink to video size */
+  max-width: 100%;         /* don’t exceed page width */
 }
 
 /* Style the hover hint */
@@ -278,4 +285,15 @@ footer a:hover { text-decoration: underline; }
 /* Show hint on hover */
 .video-wrapper:hover .sound-hint {
   opacity: 1;
+}
+
+/* All project videos scale to container nicely */
+.project-media {
+  width: 100%;           /* fill available width */
+  max-width: 960px;      /* keeps it aligned with your project layout */
+  height: auto;          /* preserve aspect ratio */
+  border-radius: 8px;    /* optional: same as images */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: block;        /* removes inline spacing */
+  margin: 0 auto;        /* centers in wrapper */
 }
