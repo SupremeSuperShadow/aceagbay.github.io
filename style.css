@@ -15,7 +15,7 @@ body {
 
 /* ===== Sticky nav offset for anchor scrolling ===== */
 html {
-  scroll-padding-top: 6rem; /* nav height + buffer for desktop */
+  scroll-padding-top: 5.2rem; /* nav height + buffer for desktop */
 }
 
 /* ===== Layout ===== */
@@ -94,8 +94,8 @@ section::before,
 article::before {
   content: "";
   display: block;
-  height: 6rem;       /* nav height + buffer */
-  margin-top: -6rem;  /* negative of above */
+  height: 5.2rem;       /* nav height + buffer */
+  margin-top: -5.2rem;  /* negative of above */
   visibility: hidden;
 }
 
