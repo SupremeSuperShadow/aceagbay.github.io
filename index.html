@@ -42,7 +42,12 @@
     <article id="2d-game" class="project">
       <h2>2D Dungeon Crawler</h2>
       <a href="projects/dungeon-2d.html">
-        <img src="images/dungeon-2d.gif" alt="2D Dungeon Crawler demo">
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline class="project-media" id="video-2d">
+            <source src="images/2D Game Highlights.mp4" type="video/mp4">
+          </video>
+          <div class="sound-hint">🔊 Hover to hear sound</div>
+        </div>
       </a>
       <p>A pixel-art style dungeon crawler focused on combat flow and replayability.</p>
       <a class="btn" href="projects/dungeon-2d.html">View Project</a>
@@ -52,7 +57,11 @@
     <article id="3d-game" class="project">
       <h2>3D Puzzle Room</h2>
       <a href="projects/puzzle-3d.html">
-        <img src="images/puzzle-3d.gif" alt="3D Puzzle Room demo">
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline class="project-media" id="video-3d">
+            <source src="images/3D Game Highlights.mp4" type="video/mp4">
+          </video>
+        </div>
       </a>
       <p>A short 3D puzzle experience centered around spatial reasoning and interaction.</p>
       <a class="btn" href="projects/puzzle-3d.html">View Project</a>
@@ -68,6 +77,19 @@
     <a href="https://github.com/SupremeSuperShadow/aceagbay.github.io">GitHub Repository</a>
   </p>
 </footer>
+
+<script>
+const videos = document.querySelectorAll(".project-media");
+
+videos.forEach(video => {
+  video.addEventListener("mouseenter", () => {
+    video.muted = false;
+  });
+  video.addEventListener("mouseleave", () => {
+    video.muted = true;
+  });
+});
+</script>
 
 </body>
 </html>

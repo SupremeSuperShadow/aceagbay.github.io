@@ -253,3 +253,29 @@ footer a:hover { text-decoration: underline; }
   border: 1px solid #ddd;
   border-radius: 6px;
 }
+
+/* Make wrapper relative for overlay positioning */
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the hover hint */
+.sound-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  pointer-events: none; /* so it doesn’t block hover on video */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show hint on hover */
+.video-wrapper:hover .sound-hint {
+  opacity: 1;
+}
