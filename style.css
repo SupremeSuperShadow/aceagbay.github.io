@@ -15,7 +15,7 @@ body {
 
 /* ===== Sticky nav offset for anchor scrolling ===== */
 html {
-  scroll-padding-top: 1.2rem; /* nav height + buffer for desktop */
+  scroll-padding-top: 1.6rem; /* nav height + buffer for desktop */
 }
 
 /* ===== Layout ===== */
@@ -66,7 +66,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   background-color: #ffffff;
   z-index: 999;
-  padding: 0.2rem 1rem;
+  padding: 0.05rem 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -94,8 +94,8 @@ section::before,
 article::before {
   content: "";
   display: block;
-  height: 1.2rem;       /* nav height + buffer */
-  margin-top: -1.2rem;  /* negative of above */
+  height: 1.6rem;       /* nav height + buffer */
+  margin-top: -1.6rem;  /* negative of above */
   visibility: hidden;
 }
 
