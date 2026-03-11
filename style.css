@@ -164,8 +164,8 @@ article::before {
 }
 
 .bio-img {
-  max-width: 180px;
-  border-radius: 50%;
+  max-width: 360px;
+  border-radius: 10%;
   margin-top: 1rem;
 }
 
