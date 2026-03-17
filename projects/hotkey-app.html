@@ -23,25 +23,21 @@
 
     <h2>OCR Demo</h2>
       <p>Extract text from images with one click.</p>
-      <a href="projects/hotkey-app.html">
-        <div class="video-wrapper">
-          <video autoplay loop muted playsinline class="project-media" id="video-app">
-            <source src="images/OCR Demo.mp4" type="video/mp4">
-          </video>
-          <div class="sound-hint">🔊 Hover to hear sound</div>
-        </div>
-      </a>
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline class="project-media" id="video-app">
+          <source src="../images/OCR Demo.mp4" type="video/mp4">
+        </video>
+        <div class="sound-hint">🔊 Hover to hear sound</div>
+      </div>
 
       <h2>Macro Mode Demo</h2>
       <p>Automatically generate timeline from recorded inputs and edit afterwards.</p>
-      <a href="projects/hotkey-app.html">
-        <div class="video-wrapper">
-          <video autoplay loop muted playsinline class="project-media" id="video-app">
-            <source src="images/App Macro Highlights.mp4" type="video/mp4">
-          </video>
-          <div class="sound-hint">🔊 Hover to hear sound</div>
-        </div>
-      </a>
+      <div class="video-wrapper">
+        <video autoplay loop muted playsinline class="project-media" id="video-app">
+          <source src="../images/App Macro Highlights.mp4" type="video/mp4">
+        </video>
+        <div class="sound-hint">🔊 Hover to hear sound</div>
+      </div>
 
     <!-- Tools -->
     <h2>Tools</h2>
@@ -75,6 +71,20 @@
     <a href="https://github.com/SupremeSuperShadow/aceagbay.github.io">GitHub Repository</a>
   </p>
 </footer>
+
+<script>
+const videos = document.querySelectorAll(".project-media");
+
+videos.forEach(video => {
+  video.addEventListener("mouseenter", () => {
+    video.muted = false;
+    video.play();
+  });
+  video.addEventListener("mouseleave", () => {
+    video.muted = true;
+  });
+});
+</script>
 
 </body>
 </html>
